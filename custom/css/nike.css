@@ -31,10 +31,99 @@ header {
 }
 
 nav {
-  color: white;
   padding: 10px;
   width: 50%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav ul {
+	padding: 0;
+  margin: 0;
+	list-style: none;
+	position: relative;
+	}
+	
+nav ul li {
+	display:inline-block;
+	}
+
+nav a {
+	display:block;
+	padding: 5px;	
+	color:#FFF;
+	font-size:15px;
+	line-height: 40px;
+	text-decoration:none;
+}
+
+nav a:hover { 
+	background-color: red; 
+}
+
+
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute; 
+	top: 40px; /* the height of the main nav */
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:100px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+
+
+/* Change this in order to change the Dropdown symbol */
+li > a:after { content:  ' '; }
+li > a:only-child:after { content: ''; }
+
+
+	
+
+
+<span class="material-symbols-outlined">
+arrow_drop_down
+</span>
+
+
+
+
+
+
+
+
+
+
+
 
 .logoHead {
   width: 20%;
