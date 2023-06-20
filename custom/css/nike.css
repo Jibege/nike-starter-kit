@@ -1,3 +1,8 @@
+body {
+  margin: 0px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 :root {
     --main-color-1: black;
     --main-color-2: yellow;
@@ -12,7 +17,73 @@
 }
 
 .size-icon { 
-  
+  height: 25px;  
   fill: var(--main-color-2);
 
+}
+
+
+
+header {
+  display: flex;
+  background-color: black;
+  padding: 10px;
+}
+
+nav {
+  color: white;
+  padding: 10px;
+  width: 50%;
+}
+
+.logoHead {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.size-logo { 
+  height: 80px;
+ }
+
+ .social { display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+ }
+
+article{
+  background-color: aqua;
+  padding: 10px;
+}
+section {
+  background-color: aquamarine;
+  padding: 10px;
+}
+
+footer {
+  background-color: green;
+  height: 100px;
+  display: flex;
+}
+ 
+.logoFoot {
+  display: flex;
+  align-content: space-around;
+  justify-content: center;
+  width: 25%;
+  padding: 15px;
+  background-color: yellow;
+}
+
+.slogan {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: yellow;
+  font-size: 30px;
+  font-weight: 900;
 }
