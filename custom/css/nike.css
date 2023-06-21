@@ -150,7 +150,24 @@ p {
 }
 section {
   background-color: white;
- height: 100px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  
+ 
+}
+
+.produitBox {
+  width: calc(100%/3);
+  aspect-ratio: 1 / 1;
+  
+
+  box-sizing: border-box;
+  
+}
+
+.produitBox:nth-child(even) {
+  background-color: lightyellow;
 }
 
 footer {
