@@ -61,6 +61,7 @@ nav ul {
 	
 nav ul li {
 	display:inline-block;
+  background-color: BLACK;
   
 	}
 
@@ -150,17 +151,24 @@ li > a:only-child:after { content: ''; }
  }
 
 article{
-  background-color: yellow;
   padding: 1px 0px 0px 0px;
 }
 
 p { 
   font-size: 20px;
+  background-color: yellow;
+  height: 50px;
+    text-align: center;
   font-weight: bolder;
-  text-align: center;
+  padding-top: 20px;
+  margin-top: 0px;
+  width: 100%;
+  position: absolute;
+  z-index: 9;
 }
 section {
   background-color: white;
+  margin-top: 70px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -172,11 +180,18 @@ section {
   box-sizing: border-box;
   position: relative;
 }
+
+
 .produitPrix {
   display: flex;
   position: absolute;
   z-index: 1;
   align-items: baseline;
+}
+
+.produitPhoto:hover {
+  transform: scale(1.1);
+  border-radius: 50%;
 }
 .prix {
   background-color: yellow;
@@ -233,9 +248,11 @@ section {
 }
 */
 footer {
-  background-color: green;
   height: 100px;
   display: flex;
+  width: 100%;
+  position: absolute;
+  z-index: 9;
 }
  
 .logoFoot {
@@ -287,6 +304,7 @@ footer {
   
    nav {
     justify-content: flex-start;
+    background-color: black;
     box-sizing: border-box;
     margin-top: 20px;
     margin-right: 20px;
@@ -297,16 +315,16 @@ footer {
 
   nav ul li {
     display: block;
+    background-color: black;
     
     
     }
     nav ul ul li {
-      width:100px;
+      width:150px;
       float:none;
       display:list-item;
       position: relative;
       
-  background-color: yellow
     }
 
     nav a:hover { 
