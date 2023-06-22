@@ -29,6 +29,7 @@ header {
   background-color: black;
   padding: 10px;
   height: 90px;
+ 
 }
 
 .accueilStyle {
@@ -55,19 +56,22 @@ nav ul {
   margin: 0;
 	list-style: none;
 	position: relative;
+  z-index: 1;
 	}
 	
 nav ul li {
 	display:inline-block;
+  
 	}
 
 nav a {
 	display:block;
   padding: 3px 10px 3px 10px;
 	color:#FFF;
-	font-size:15px;
+	font-size:14px;
 	line-height: 40px;
 	text-decoration:none;
+  
 }
 
 nav a:hover { 
@@ -82,6 +86,7 @@ nav a:hover {
 nav ul ul {
 	display: none;
 	position: absolute; 
+  
 	top: 40px; /* the height of the main nav */
 }
 	
@@ -106,13 +111,18 @@ li > a:only-child:after { content: ''; }
 
           /* FIN MENU DEROULANT */
 
-          
+      
 
 .logoHead {
-  width: 20%;
+  width: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.material-icons {
+  position: relative; 
+  top: 6px;
 }
 
 .size-logo { 
@@ -136,6 +146,7 @@ li > a:only-child:after { content: ''; }
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: -1;
  }
 
 article{
@@ -163,6 +174,9 @@ section {
 }
 .produitPrix {
   display: flex;
+  position: absolute;
+  z-index: 1;
+  align-items: baseline;
 }
 .prix {
   background-color: yellow;
@@ -172,19 +186,23 @@ section {
   border-radius:50%;
   box-shadow: 10px 10px rgb(0, 0, 0);
   position: absolute;
-  top: 40px;  
+  top: 20px;  
   height:  50px;
   aspect-ratio: 1 / 1;
   left: 20px;
   font-weight: bolder; 
   transform: rotate(-10deg);
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modele {
   
   background-color: rgb(255, 255, 0);
-  padding: 10px; 
-  font-weight: bolder; 
+  padding: 5px; 
+  width: 120px;
+  font-weight: 900; 
   text-align: center;
   margin-left: 150px;
   text-align: center;
@@ -195,12 +213,18 @@ section {
   transform: rotate(10deg);
 }
 
-
-
 .produitPhoto {
   box-sizing: border-box;  
   width: 100%;
-  
+  filter: saturate(0);
+  z-index: 0;
+  transition-duration: 0.2s;
+   
+}
+
+.produitPhoto:hover {
+ 
+  filter: saturate(01);
 }
 
 /*
@@ -232,4 +256,177 @@ footer {
   color: yellow;
   font-size: 30px;
   font-weight: 900;
+}
+
+
+@media screen and (max-width: 993px){
+
+  .prix {
+    background-color: red;
+   
+  }
+
+   header {
+    flex-direction: column;
+    padding: 0px;
+    height: 350px;
+    justify-content: flex-start;
+        
+  }
+  
+  
+  .social { background-color: yellow;
+    width: 100%;
+    height: 50px;
+    order:1;
+    display: flex;
+  justify-content: space-around;
+   }
+
+   .logoHead {
+    order: 2;
+    margin-top: 50px;
+   }
+  
+   nav {
+    justify-content: flex-start;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    order: 3;
+    width: 100%;
+  }
+
+  nav ul li {
+    display: block;
+    
+    
+    }
+    nav ul ul li {
+      width:100px;
+      float:none;
+      display:list-item;
+      position: relative;
+      
+  background-color: yellow
+    }
+
+    nav a:hover { 
+      background-color: yellow;
+      color: black;
+      border-radius: 5px;
+    }
+
+ul { 
+  width: 100%;
+}
+
+nav a {
+  padding: 3px 5px 3px 5px;
+	color:#FFF;
+	font-size:14px;
+	line-height: 20px;
+	text-decoration:none;
+  
+}
+
+
+
+.accueilStyle {
+  background-color: yellow;
+}
+  .wallBox {
+    display: none;
+  }
+
+  .size-icon { 
+    fill: var(--main-color-1);
+  
+  }
+
+  .couleur-logo {
+    fill: var(--main-color-2);
+}
+
+.produitBox {
+  width: calc(100%/2);
+  aspect-ratio: 1 / 1;
+}
+
+footer {
+  flex-wrap: wrap;
+  height: 220px;
+  
+}
+
+.logoFoot {
+  box-sizing: border-box;
+  flex-basis: 100%;
+  height: 110px;
+  align-items: center;
+}
+
+.size-logo {
+  height: 70px;
+}
+
+.slogan {
+  flex-basis: 100%;
+  height: 110px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+  
+}
+
+
+ 
+.logoFoot {
+  display: flex;
+  align-content: space-around;
+  justify-content: center;
+  width: 25%;
+  padding: 15px;
+  background-color: yellow;
+}
+
+.slogan {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: yellow;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+
+@media screen and (max-width: 768px){
+
+  .prix {
+    background-color: green;
+    padding: 10px;
+    text-align: center;
+    font-size: 10px;
+    border-radius:50%;
+    box-shadow: 10px 10px rgb(0, 0, 0);
+    position: absolute;
+    top: 20px;  
+    height:  50px;
+    aspect-ratio: 1 / 1;
+    left: 20px;
+    font-weight: bolder; 
+    transform: rotate(-10deg);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
 }
